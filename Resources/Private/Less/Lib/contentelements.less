@@ -1,0 +1,194 @@
+@contentMargin: 20px;
+.ce-align-left {
+	text-align: left;
+}
+
+.ce-align-center {
+	text-align: center;
+}
+
+.ce-align-right {
+	text-align: right;
+}
+
+.ce-table {
+	td, th {
+		vertical-align: top;
+	}
+}
+
+.ce-textpic, .ce-nowrap .ce-bodytext, .ce-gallery, .ce-row, .ce-uploads li, .ce-uploads div {
+	overflow: hidden;
+}
+
+.ce-left .ce-gallery, .ce-column, .ce-left .image-wrap {
+	float: left;
+}
+
+.ce-intext {
+	&.ce-center {
+		&.ce-outer {
+
+			position: relative;
+			float: right;
+			right: 50%;
+		}
+		&.ce-inner {
+			position: relative;
+			float: right;
+			right: -50%;
+		}
+	}
+
+	.ce-gallery {
+
+		figure {
+			display: table;
+			margin: 0;
+		}
+
+		figcaption {
+			display: table-caption;
+			caption-side: bottom;
+		}
+
+		img {
+			display: block;
+		}
+	}
+}
+
+.ce-right .ce-gallery, .ce-right .image-wrap {
+	float: right;
+}
+
+
+
+//.ce-gallery figure {
+//	display: table;
+//	margin: 0;
+//}
+//
+//.ce-gallery figcaption {
+//	display: table-caption;
+//	caption-side: bottom;
+//}
+//
+//.ce-gallery img {
+//	display: block;
+//}
+
+.ce-border img {
+	border: 2px solid black;
+	padding: 0;
+}
+
+.ce-intext {
+
+	&.ce-right, &.ce-left, &.ce-above {
+		.ce-gallery, .image-wrap {
+			margin-bottom: @contentMargin;
+		}
+	}
+
+	&.ce-right {
+		.ce-gallery, .image-wrap {
+			margin-left: @contentMargin;
+		}
+	}
+
+	&.ce-left {
+		ol, ul {
+			padding-left: 40px;
+			overflow: auto;
+		}
+		.ce-gallery, .image-wrap {
+			margin-right: @contentMargin;
+		}
+	}
+
+	&.ce-below {
+		.ce-gallery, .image-wrap {
+			margin-top: @contentMargin;
+		}
+	}
+
+}
+
+.ce-column {
+	margin-right: @contentMargin;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+//.ce-column {
+//	margin-right: @contentMargin;
+//}
+
+.ce-row {
+	margin-bottom: @contentMargin;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+//.ce-row:last-child {
+//	margin-bottom: 0;
+//}
+
+.ce-above .ce-bodytext {
+	clear: both;
+}
+
+//	.ce-intext.ce-left ol, .ce-intext.ce-left ul {
+//		padding-left: 40px;
+//		overflow: auto;
+//	}
+
+.ce-uploads {
+	margin: 0;
+	padding: 0;
+
+	li {
+		list-style: none outside none;
+		margin: 1em 0;
+	}
+
+	img {
+		float: left;
+		margin-right: 16px;
+		vertical-align: top;
+	}
+	span {
+		display: block;
+	}
+}
+
+.ce-media {
+	img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
+}
+
+.image img {
+	max-width: 100%;
+	height: auto;
+}
+
+//.ce-uploads li {
+//	list-style: none outside none;
+//	margin: 1em 0;
+//}
+//
+//.ce-uploads img {
+//	float: left;
+//	padding-right: 1em;
+//	vertical-align: top;
+//}
+//.ce-uploads span {
+//	display: block;
+//}

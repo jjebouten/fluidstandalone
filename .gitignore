@@ -1,0 +1,17 @@
+/Web/.htaccess
+node_modules
+/vendor
+.idea
+composer.phar
+
+# local files excluded from versioning
+/mbox
+/backups
+/local_files
+/.env
+/phpunit
+/codecept
+/doctrine-dbal
+/fluid
+/typo3
+/Web/typo3conf/PackageStates.php

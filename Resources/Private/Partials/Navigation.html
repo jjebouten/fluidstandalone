@@ -1,0 +1,55 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a  class="navbar-brand" href="homepage">
+                <img src="Img/gilde.jpg" class="brand-image">
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <f:for each="{menu}" as="menuItem" key="link">
+                    <f:if condition="{menu.active}">
+                        <f:then>
+                            <li class="active"><a href="{link}">{menuItem.title}</a></li>
+                        </f:then>
+                        <f:else>
+                            <li><a href="{link}">{menuItem.title}</a></li>
+                        </f:else>
+                    </f:if>
+                </f:for>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <f:for each="{menu}" as="menuItem" key="link">
+                            <f:if condition="{menu.active}">
+                                <f:then>
+                                    <li class="active"><a href="{menuItem.link}">{menuItem.title}</a></li>
+                                    <li role="separator" class="divider"></li>
+                                </f:then>
+                                <f:else>
+                                    <li><a href="{link}">{menuItem.title}</a></li>
+                                    <li role="separator" class="divider"></li>
+
+                                </f:else>
+                            </f:if>
+                        </f:for>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+</html>
