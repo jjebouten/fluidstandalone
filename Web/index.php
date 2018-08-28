@@ -26,7 +26,13 @@ $menu = [
 ];
 
 $pages =["homepage", "firstpage", "secondpage", "thirdpage"];
-$route = (isset($_GET['route'])? $route = $_GET['route'] : $route = "homepage");
+$route = (isset($_GET['route'])? $_GET['route'] : "homepage");
+$route = "homepage";
+if(isset($_GET['route']))
+{
+    $route = $_GET['route'];
+}
+
 $route = strtolower($route);
 if(isset($menu[$route])){
     $menu[$route]['active'] = true;
