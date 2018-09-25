@@ -20,10 +20,10 @@
                 <f:for each="{menu}" as="menuItem" key="link">
                     <f:if condition="{menu.active}">
                         <f:then>
-                            <li class="active"><a href="{link}">{menuItem.title}</a></li>
+                            <li class="active"><a href="?route={link}">{menuItem.title}</a></li>
                         </f:then>
                         <f:else>
-                            <li><a href="{link}">{menuItem.title}</a></li>
+                            <li><a href="?route={link}">{menuItem.title}</a></li>
                         </f:else>
                     </f:if>
                 </f:for>
@@ -34,11 +34,11 @@
                         <f:for each="{menu}" as="menuItem" key="link">
                             <f:if condition="{menu.active}">
                                 <f:then>
-                                    <li class="active"><a href="{menuItem.link}">{menuItem.title}</a></li>
+                                    <li class="active"><a href="?route={menuItem.link}">{menuItem.title}</a></li>
                                     <li role="separator" class="divider"></li>
                                 </f:then>
                                 <f:else>
-                                    <li><a href="{link}">{menuItem.title}</a></li>
+                                    <li><a href="?route={link}">{menuItem.title}</a></li>
                                     <li role="separator" class="divider"></li>
 
                                 </f:else>
